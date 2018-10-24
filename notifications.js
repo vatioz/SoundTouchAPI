@@ -118,7 +118,7 @@ var wsUri1;
 
   function onClose(evt, sequence) {
     writeToScreen("DISCONNECTED (" + sequence + ")");
-    
+
     var connectBtn = getElement("connectText", sequence);
     $(connectBtn).text("Subscribe");
 
@@ -243,15 +243,16 @@ var wsUri1;
   }
 
   function onKeyClick(key, sequence) {
-      var ip = speakers[sequence]["ip"]
+    var ip = speakers[sequence]["ip"]
     var postURL = "http://" + ip + ":8090";
-    var data = "<key state='release' sender='Gabbo'>"+key+"</key>";
+    var dataPress = "<key state='press' sender='Gabbo'>"+key+"</key>";
+    var dataRelease = "<key state='release' sender='Gabbo'>"+key+"</key>";
 
     $.ajax({
       url: postURL + "/key",
       type: 'POST',
       crossDomain: true,
-      data: data,
+      data: dataPress,
       dataType: 'text',
       success: function (result) {
         //Worked.
@@ -261,6 +262,21 @@ var wsUri1;
           'Response: ' + jqXHR.responseText);
       }
     });
+
+    $.ajax({
+        url: postURL + "/key",
+        type: 'POST',
+        crossDomain: true,
+        data: dataRelease,
+        dataType: 'text',
+        success: function (result) {
+          //Worked.
+        },
+        error: function (jqXHR, transStatus, errorThrown) {
+          alert('Status: ' + jqXHR.status + ' ' + jqXHR.statusText + '.' +
+            'Response: ' + jqXHR.responseText);
+        }
+      });
   }
 
 
