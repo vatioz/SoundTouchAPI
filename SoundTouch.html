@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Bose group play</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+  crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+
+
+
+
+<script src="notifications.js"></script>
+  
+</script>
+
+<div class="container">
+
+  <h2>Bose group play</h2>
+
+  <form>
+    <div class="row">
+
+      <div class="col">
+        <div class="form-group row">
+          <button id="connect1Btn" type="button" class="btn btn-default col-sm-2" onclick='javascript:onConnectClick()'>
+            <i class="fas fa-plug"></i>
+          </button>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="name1" value="KitchenBose">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row">
+          <button id="connect2Btn" type="button" class="btn btn-default col-sm-2" onclick='javascript:onConnectClick()'>
+            <i class="fas fa-plug"></i>
+          </button>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="name2" value="PlayroomBose">
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col">
+        <div class="form-group row">
+          <label for="ipAddr1" class="col-sm-2 col-form-label">IP</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ipAddr1" placeholder="IP" value="192.168.1.111">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row">
+          <label for="ipAddr2" class="col-sm-2 col-form-label">IP</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ipAddr2" placeholder="IP" value="192.168.1.121">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col" align="right">
+        <div class="btn-group btn-group-lg" role="group">
+          <button id="volumeDown1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-volume-down"></i>
+          </button>
+          <button id="back1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="pause1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button id="play1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="forward1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-forward"></i>
+          </button>
+          <button id="volumeUp1Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col" align="right">
+        <div class="btn-group btn-group-lg" role="group">
+          <button id="volumeDown2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-volume-down"></i>
+          </button>
+          <button id="back2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="pause2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button id="play2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="forward2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-forward"></i>
+          </button>
+          <button id="volumeUp2Btn" type="button" class="btn btn-secondary">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <hr />
+
+
+    <div class="row">
+      <div class="col" align="center">
+        <h3>Now playing</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col" align="center">
+        <button id="nowPlaying1Btn" type="button" class="btn btn-default" onclick='javascript:onNowPlayingClick("1")'>
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+      <div class="col" align="center">
+        <button id="nowPlaying2Btn" type="button" class="btn btn-default" onclick='javascript:onNowPlayingClick("2")'>
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+      <div class="w-100"></div>
+
+      <div class="col">
+        <div class="form-group row">
+          <label for="song1" class="col-sm-2 col-form-label">Song</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="song1" value="Some Song">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row">
+          <label for="song2" class="col-sm-2 col-form-label">Song</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="song2" value="Some Song">
+          </div>
+        </div>
+      </div>
+      <div class="w-100"></div>
+
+      <div class="col">
+        <div class="form-group row">
+          <label for="album1" class="col-sm-2 col-form-label">Album</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="album1" value="Some Album">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row">
+          <label for="album2" class="col-sm-2 col-form-label">Album</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="album2" value="Some Album">
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col">
+        <div class="form-group row">
+          <label for="artist1" class="col-sm-2 col-form-label">Artist</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="artist1" value="Some Artist">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row">
+          <label for="artist2" class="col-sm-2 col-form-label">Artist</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="artist2" value="Some Artist">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <div class="col" align="center">
+        <h3>Zones</h3>
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <div class="form-group row">
+          <label for="zoneStatus" class="col-sm-2 col-form-label">Status</label>
+          <div class="col-sm-10">
+            <input type="text" disabled="disabled" class="form-control" id="zoneStatus" value="None">
+          </div>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col" align="center">
+        <input id="autoZoneBtn" class="btn btn-default" type="button" value="Make zone automatically" onclick='javascript:onAutoZoneClick()' />
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col" align="center">
+        <input id="setZone1Btn" class="btn btn-default" type="button" value="Make zone with me as master" onclick='javascript:onSetZoneClick("1")' />
+      </div>
+      <div class="col" align="center">
+        <input id="setZone2Btn" class="btn btn-default" type="button" value="Make zone with me as master" onclick='javascript:onSetZoneClick("2")' />
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col" align="center">
+        Is master:
+      </div>
+      <div class="col" align="center">
+        Is master:
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col" align="center">
+        <input id="removeSlave1Btn" class="btn btn-default" type="button" value="Remove me from zone" onclick='javascript:onRemoveSlaveClick("1")' />
+      </div>
+      <div class="col" align="center">
+        <input id="removeSlave2Btn" class="btn btn-default" type="button" value="Remove me from zone" onclick='javascript:onRemoveSlaveClick("2")' />
+      </div>
+
+    </div>
+
+    <hr />
+
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <h3>Presets</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" align="center">
+        <div class="btn-group">
+          <button id="preset1-1Btn" type="button" class="btn btn-secondary">1</button>
+          <button id="preset2-1Btn" type="button" class="btn btn-secondary">2</button>
+          <button id="preset3-1Btn" type="button" class="btn btn-secondary">3</button>
+          <button id="preset4-1Btn" type="button" class="btn btn-secondary">4</button>
+          <button id="preset5-1Btn" type="button" class="btn btn-secondary">5</button>
+          <button id="preset6-1Btn" type="button" class="btn btn-secondary">6</button>
+        </div>
+      </div>
+      <div class="col" align="center">
+        <div class="btn-group">
+          <button id="preset1-2Btn" type="button" class="btn btn-secondary">1</button>
+          <button id="preset2-2Btn" type="button" class="btn btn-secondary">2</button>
+          <button id="preset3-2Btn" type="button" class="btn btn-secondary">3</button>
+          <button id="preset4-2Btn" type="button" class="btn btn-secondary">4</button>
+          <button id="preset5-2Btn" type="button" class="btn btn-secondary">5</button>
+          <button id="preset6-2Btn" type="button" class="btn btn-secondary">6</button>
+        </div>
+      </div>
+    </div>
+
+
+    <hr />
+
+    <div class="row mt-4"></div>
+    <br />
+    <input id="sendKeyBtn" type='button' onclick='javascript:onPresetKeyClick()' value='Send key' />
+
+
+    <input id="nowPlayingBtn" type='button' onclick='javascript:onNowPlayingClick()' value='Now playing' />
+
+
+    <input id="getZoneBtn" type='button' onclick='javascript:onGetZoneClick()' value='Get zone' />
+
+
+    <input id="setZone1Btn" type='button' onclick='javascript:onSetZone1Click()' value='setZone1Btn' />
+
+    <input id="setZone2Btn" type='button' onclick='javascript:onSetZone2Click()' value='setZone2Btn' />
+
+
+    <input id="addZoneSlaveBtn" type='button' onclick='javascript:onAddZoneSlaveClick()' value='addZoneSlave' />
+
+
+    <input id="removeZoneSlaveBtn" type='button' onclick='javascript:onRemoveZoneSlaveClick()' value='removeZoneSlave' />
+
+    <div class="row ">Output:</div>
+    <div class="row ">      
+      <div id="output"></div>
+    </div>
+
+    <div class="row ">Raw messages:</div>
+    <div class="row mb-5 pb-5">      
+      <textarea id="rawArea" class="form-control-sm" style="min-width: 100%; height:500px"> </textarea>
+    </div>
+
+</div>

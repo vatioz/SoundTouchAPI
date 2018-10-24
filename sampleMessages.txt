@@ -1,0 +1,96 @@
+GET /info
+<info deviceID="$MACADDR">
+  <name>$STRING</name>
+  <type>$STRING</type>
+  <margeAccountUUID>$STRING</margeAccountUUID>
+  <components>
+    <component>
+      <componentCategory>$STRING</componentCategory>
+      <softwareVersion>$STRING</softwareVersion>
+      <serialNumber>$STRING</serialNumber>
+    </component>
+    ...
+  </components>
+  <margeURL>$URL</margeURL>
+  <networkInfo type="$STRING">
+    <macAddress>$MACADDR</macAddress>
+    <ipAddress>$IPADDR</ipAddress>
+  </networkInfo>
+  ...
+</info>
+
+GET /now_playing
+<nowPlaying deviceID="$MACADDR" source="$SOURCE">
+<ContentItem source="$SOURCE" location="$STRING" sourceAccount="$STRING" isPresetable="$BOOL">
+  <itemName>$STRING</itemName>
+</ContentItem>
+<track>$STRING</track>
+<artist>$STRING</artist>
+<album>$STRING</album>
+<stationName>$STRING</stationName>
+<art artImageStatus="$ART_STATUS">$URL</art>
+<playStatus>$PLAY_STATUS</playStatus>
+<description>$STRING</description>
+<stationLocation>$STRING</stationLocation>
+</nowPlaying>
+
+GET /getZone
+<zone master="$DEVICEID_MACADDR">
+  <member ipaddress="$MASTER_IPADDR">$MASTER_DEVICEID_MACADDR</member>
+  <member ipaddress="$SLAVE1_IPADDR">$SLAVE1_DEVICEID_MACADDR</member>
+  ...
+</zone>
+
+POST /setZone
+<zone master="$DEVICEID_MACADDR">
+  <member ipaddress="$IPADDR">$DEVICEID_MACADDR</member>
+  ...
+</zone>
+
+
+
+<updates deviceID="F45EAB6906CA">
+	<nowPlayingUpdated>
+		<nowPlaying deviceID="A81B6A550F06" source="SPOTIFY" sourceAccount="upirka">
+			<ContentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:collection" sourceAccount="upirka" isPresetable="true">
+				<itemName>My songs</itemName>
+				<containerArt>https://i.scdn.co/image/45516b74fa36780c09297b04a68d765fa35a91c3</containerArt>
+			</ContentItem>
+			<track>Comptine d&apos;un autre été, l&apos;après-midi</track>
+			<artist>Yann Tiersen</artist>
+			<album>Amelie from Montmartre (Original SoundTrack)</album>
+			<stationName />
+			<art artImageStatus="IMAGE_PRESENT">http://i.scdn.co/image/792c8973d3e96fbaeebc30555408fc43ea7c4437</art>
+			<time total="140">0</time>
+			<skipEnabled />
+			<playStatus>PLAY_STATE</playStatus>
+			<shuffleSetting>SHUFFLE_OFF</shuffleSetting>
+			<repeatSetting>REPEAT_OFF</repeatSetting>
+			<skipPreviousEnabled />
+			<streamType>TRACK_ONDEMAND</streamType>
+			<trackID>spotify:track:3YYKrn3iGOAel605Znt3ai</trackID>
+		</nowPlaying>
+	</nowPlayingUpdated>
+</updates>
+
+
+<nowPlaying deviceID="F45EAB6906CA" source="SPOTIFY" sourceAccount="upirka">
+	<ContentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:collection" sourceAccount="upirka" isPresetable="true">
+		<itemName>My songs</itemName>
+		<containerArt>https://i.scdn.co/image/45516b74fa36780c09297b04a68d765fa35a91c3</containerArt>
+	</ContentItem>
+	<track>La valse d&apos;Amélie</track>
+	<artist>Yann Tiersen</artist>
+	<album>Amelie from Montmartre (Original SoundTrack)</album>
+	<stationName />
+	<art artImageStatus="IMAGE_PRESENT">http://i.scdn.co/image/792c8973d3e96fbaeebc30555408fc43ea7c4437</art>
+	<time total="135">60</time>
+	<skipEnabled />
+	<favoriteEnabled />
+	<playStatus>PLAY_STATE</playStatus>
+	<shuffleSetting>SHUFFLE_OFF</shuffleSetting>
+	<repeatSetting>REPEAT_OFF</repeatSetting>
+	<skipPreviousEnabled />
+	<streamType>TRACK_ONDEMAND</streamType>
+	<trackID>spotify:track:01Q55Xv60Gr56abx5ad5vK</trackID>
+</nowPlaying>
