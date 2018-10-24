@@ -250,7 +250,7 @@ var wsUri1;
 
     $.ajax({
       url: postURL + "/key",
-      type: 'POST',
+      type: 'POST', 
       crossDomain: true,
       data: dataPress,
       dataType: 'text',
