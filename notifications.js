@@ -18,8 +18,9 @@ var wsUri1;
   var album1;
   var artist1;
 
-  function init() {
-      alert('hello');
+  var speakers = {}
+
+  function init() {      
     output = document.getElementById("output");
     outArea = document.getElementById("outArea");
     rawArea = document.getElementById("rawArea");
@@ -37,7 +38,9 @@ var wsUri1;
     song1 = document.getElementById("song1");
     album1 = document.getElementById("album1");
     artist1 = document.getElementById("artist1");
-    testWebSocket();
+    
+    start("1");
+    start("2");
   }
 
   function getElement(id, sequence) {
@@ -49,49 +52,47 @@ var wsUri1;
       return el.value;
   }
 
-  function testWebSocket() {
-    ipAddr1 = ipAddrField1.value;
-    wsUri1 = "ws://" + ipAddr1 + ":8080/"
-    websocket1 = new WebSocket(wsUri1, "gabbo");
-    websocket1.onopen = function (evt) {
-      onOpen(evt, "1")
-    };
-    websocket1.onclose = function (evt) {
-      onClose(evt, "1")
-    };
-    websocket1.onmessage = function (evt) {
-      onMessage(evt, "1")
-    };
-    websocket1.onerror = function (evt) {
-      onError(evt, "1")
-    };
+  function start(sequence) {
+    var ip = getIpAddress(sequence);
+    var wsUri = "ws://" + ip + ":8080/";
+    var websocket = new WebSocket(wsUri, "gabbo");
 
-    ipAddr2 = ipAddrField2.value;
-    wsUri2 = "ws://" + ipAddr2 + ":8080/"
-    websocket2 = new WebSocket(wsUri2, "gabbo");
-    websocket2.onopen = function (evt) {
-      onOpen(evt, "2")
+    var info = {};
+    info["ip"] = ip;
+    info["socket"] = websocket;
+    speakers[sequence] = info;
+
+
+    websocket.onopen = function (evt) {
+      onOpen(evt, sequence);
     };
-    websocket2.onclose = function (evt) {
-      onClose(evt, "2")
+    websocket.onclose = function (evt) {
+      onClose(evt, sequence);
     };
-    websocket2.onmessage = function (evt) {
-      onMessage(evt, "2")
+    websocket.onmessage = function (evt) {
+      onMessage(evt, sequence);
     };
-    websocket2.onerror = function (evt) {
-      onError(evt, "2")
-    };
+    websocket.onerror = function (evt) {
+      onError(evt, sequence);
+    };    
   }
 
   function onOpen(evt, sequence) {
-    writeToScreen("CONNECTED");
-    //connectBtn.value = "Disconnect";
+    writeToScreen("CONNECTED ("+ sequence + ")" );
+    var connectBtn = getElement("connectText", sequence);
+    $(connectBtn).text("Unsubscribe");
+    
+    
     var ipAddrField = getElement("ipAddr", sequence);
     $(ipAddrField).prop("disabled", "disabled");
-    //$(ipAddrField2).prop("disabled", "disabled");
-    //doSend("WebSocket rocks");
+
+    var info = speakers[sequence];
+    info["ip"] = getIpAddress(sequence);
+    speakers[sequence] = info;
+    
     writeToScreen("Getting info for " + sequence + "...");
-    $.get("http://" + getIpAddress(sequence) + ":8090/info")
+
+    $.get("http://" + speakers[sequence]["ip"] + ":8090/info")
       .done(function (data) {
         infoReceived(data, sequence)
       })
@@ -105,17 +106,29 @@ var wsUri1;
     var type = $(data).find("type").text();
     var mac = $(data).find("info").attr("deviceID");
 
-    //ctrl.value = "Name: " + name + ", MAC: " + mac + ", type: " + type;
-    // TODO populate name and save MAC somewhere
+    var info = speakers[sequence]
+    info["name"] = name;
+    info["type"] = type;
+    info["mac"] = mac;
 
+    getElement("name", sequence).value = name;
+    //var nameEl = getElement("name", sequence);
+    //$(nameEl).text(name);
   }
 
   function onClose(evt, sequence) {
-    writeToScreen("DISCONNECTED");
-    //connectBtn.value = "Connect";
+    writeToScreen("DISCONNECTED (" + sequence + ")");
+    
+    var connectBtn = getElement("connectText", sequence);
+    $(connectBtn).text("Subscribe");
+
     var ipAddrField = getElement("ipAddr", sequence);
     $(ipAddrField).removeAttr("disabled");
-    //$(ipAddrField2).removeAttr("disabled");
+    
+    getElement("song", sequence).value = "";
+    getElement("album", sequence).value = "";
+    getElement("artist", sequence).value = "";
+    getElement("name", sequence).value = "";
   }
 
   function onGetZoneClick(evt) {
@@ -154,7 +167,9 @@ var wsUri1;
           slaveMac = mac;
         }
       });
-      writeStatus("Master: " + masterIp + "(" + masterMac + "), slave: " + slaveIp + "(" + slaveMac + ")");
+
+      document.getElementById("zoneStatus").value = "Master: " + masterIp + "(" + masterMac + "), slave: " + slaveIp + "(" + slaveMac + ")";
+      
     }
   }
 
@@ -193,7 +208,7 @@ var wsUri1;
       data: data,
       dataType: 'text',
       success: function (result) {
-          document.getElementById("zoneStatus").value = result;
+          //document.getElementById("zoneStatus").value = result;
         //writeStatus(result);
       },
       error: function (jqXHR, transStatus, errorThrown) {
@@ -227,9 +242,10 @@ var wsUri1;
 
   }
 
-  function onPresetKeyClick() {
-    var postURL = "http://" + ipAddr1 + ":8090";
-    var data = "<key state='release' sender='Gabbo'>PRESET_1</key>";
+  function onKeyClick(key, sequence) {
+      var ip = speakers[sequence]["ip"]
+    var postURL = "http://" + ip + ":8090";
+    var data = "<key state='release' sender='Gabbo'>"+key+"</key>";
 
     $.ajax({
       url: postURL + "/key",
@@ -263,19 +279,20 @@ var wsUri1;
 
   function nowPlayingReceived(xmlMessage, sequence) {
 
-    if (xmlMessage.find('nowPlaying').attr('source') === 'STANDBY') {
+    var nowPlaying = xmlMessage.find('nowPlaying');
+    if (nowPlaying.attr('source') === 'STANDBY') {
       //outArea.value += "STANDBY\n";
       return;
     }
 
-    //var track = xmlMessage.find("track").text(); // for some unknown reason there is another element in jquery object and this is empty
-    var track = xmlMessage.find("track").text();
+    //var track = nowPlaying.find("track").text(); // for some unknown reason there is another element in jquery object and this is empty
+    var track = nowPlaying.find("track").text();
     if (track === "") {
-      track = xmlMessage.find("track")[0].nextSibling.textContent
+      track = nowPlaying.find("track")[0].nextSibling.textContent
     }
-    var album = xmlMessage.find("album").text();
-    var artist = xmlMessage.find("artist").text();
-    var time = xmlMessage.find("time");
+    var album = nowPlaying.find("album").text();
+    var artist = nowPlaying.find("artist").text();
+    var time = nowPlaying.find("time");
     var total = time.attr("total");
     var current = time.text();
     var progress = Math.floor(current / total * 100);
@@ -285,7 +302,15 @@ var wsUri1;
     getElement("song", sequence).value = track;
     getElement("album", sequence).value = album;
     getElement("artist", sequence).value = artist;
+
+    setProgress(progress, sequence);
     
+  }
+
+  function setProgress(progress, sequence) {
+      var progress = getElement("progress", sequence);
+      progress.css( "width", progress );
+      progress.value = progress + " %";
   }
 
   function onMessage(evt, sequence) // notification update from server/speaker
@@ -355,12 +380,12 @@ var wsUri1;
     rawArea.value += data + "\n\n";
   }
 
-  function onConnectClick() {
-    if (websocket1.readyState === 1) {
-      websocket1.close();
-      websocket2.close();
+  function onConnectClick(sequence) {
+    var socket = speakers[sequence]["socket"];
+    if (socket.readyState === 1) {
+        socket.close();
     } else {
-      testWebSocket();
+      start(sequence);
     }
   }
 
