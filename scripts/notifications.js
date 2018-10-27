@@ -1,9 +1,8 @@
 /*
 TODO process other update messages NETWORK SIGNAL (show some icon of signal strength)
-TODO slice this file into multiple files, each solving specific area - volume/nowPlaying/zones/keys/...
 TODO timer to have nowplaying updated more frequently
 TODO write something useful into zoneStatus 
-
+TODO think about hiding now playing and possibly other parts on standby (any other event?)
 */
 
 var soundTouchNotifications = (function () {
