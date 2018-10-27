@@ -94,3 +94,261 @@ POST /setZone
 	<streamType>TRACK_ONDEMAND</streamType>
 	<trackID>spotify:track:01Q55Xv60Gr56abx5ad5vK</trackID>
 </nowPlaying>
+
+
+<updates deviceID="A81B6A550F06">
+	<recentsUpdated>
+		<recents>
+			<recent deviceID="A81B6A550F06" utcTime="1540652300" id="2187309802">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:5p0H50uFCdWTpLY640HoPc" sourceAccount="upirka" isPresetable="true">
+					<itemName>La La Land (Original Motion Picture Soundtrack)</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540645657" id="2188517327">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:50AQE4cVqaCV4kc7XsNWPo" sourceAccount="upirka" isPresetable="true">
+					<itemName>BOSE 2 - Women</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540621786" id="2206256859">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:playlist:2i3i1j3kk4WTqL1j78K0Ww" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Discovered</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540563608" id="2187306552">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:1sFisONnRHie0RhpdpTiMK" sourceAccount="upirka" isPresetable="true">
+					<itemName>BOSE 3 - Discovered mix</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540413706" id="2214736226">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:6tdTv25RKmPO20MvW8Q9WS" sourceAccount="upirka" isPresetable="true">
+					<itemName>BOSE 1 - Jazz</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540244527" id="2239875570">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:collection" sourceAccount="upirka" isPresetable="true">
+					<itemName>My songs</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540216757" id="2239846976">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:spotify:playlist:37i9dQZEVXblPFMeRHBDUk" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Release Radar</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540214292" id="2239844782">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:0mRMDLqKRGqlO05aHMnlzY" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Anarchytecture</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540207403" id="2237113695">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:4TJ10Xsvo8FmTzdvamIvKn" sourceAccount="upirka" isPresetable="true">
+					<itemName>Jaroslav Uhlir – Hlavne nesmi byti smutno</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540108775" id="2239735597">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:collection:album:6f2HpUK0y2tsQe2emBenLS" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Beau - EP</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1540108553" id="2236065946">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:spotify:playlist:37i9dQZF1E9VNRHxcT5eoP" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Your Top Songs 2017</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539961497" id="2239505815">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:artist:1S5J45qCGowVETVuq3vDyj" sourceAccount="upirka" isPresetable="true">
+					<itemName>Kryštof</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539862937" id="2235193280">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:27QLEZNwdmlIv8DQ6DcjZt" sourceAccount="upirka" isPresetable="true">
+					<itemName>Zdeněk Svěrák – Neni nutno...</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539666726" id="2239285258">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:6eARrLflsZjUYt0hqKzsBe" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Heavy Horses (Steven Wilson Remix)</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539605710" id="2237393999">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:2NkTfFEKkgW5DKJHFk6HAi" sourceAccount="upirka" isPresetable="true">
+					<itemName>Zdeněk Svěrák – ...natoz aby se brecelo</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539344849" id="2238910603">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:05tYzb5o4rZaOEr6K4cNSC" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Man On The Rocks</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539343914" id="2238909835">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:artist:562Od3CffWedyz2BbeYWVn" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Mike Oldfield</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539321860" id="2238893054">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:5c0NFeQON726s0zzipHA1d" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Stand Up</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539104513" id="2238732694">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:7BOpmRtzboSD14sBzxaAb7" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Aqualung (Steven Wilson Mix)</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1539059905" id="2238700711">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:1gpR5bi7KnL1THGtEnx6hI" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Somewhere Before</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538917375" id="2218072857">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:5ZDcdG7tfaEX65O17BCLhn" sourceAccount="upirka" isPresetable="true">
+					<itemName>Yellow Sisters – Zvěřinec</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538718776" id="2238302924">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:spotify:playlist:37i9dQZF1E4ZfgNcArZ9Sb" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Your Time Capsule</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538718277" id="2238302704">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:search:happy" sourceAccount="jumboon" isPresetable="true">
+					<itemName>happy</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538628821" id="2235709873">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:70MRPVfLnqaw23p8Z3uPVU" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Lah-Di-Dah</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538628592" id="2238234730">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:track:1vIOhHrJ30DHmKJs0RVIQj" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Lah-Di-Dah</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538579177" id="2238194656">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:78uec0OvMg42OqpZDCUyG6" sourceAccount="upirka" isPresetable="true">
+					<itemName>Zdeněk Svěrák – Nemit srdce - vadi</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538397800" id="2238043751">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:2s3cXam9PzI5BA1jVRB1ij" sourceAccount="upirka" isPresetable="true">
+					<itemName>Like A Virgin – Madonna</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538394804" id="2227517937">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:3O0RBXsOEpaRzxjTCGx4EN" sourceAccount="upirka" isPresetable="true">
+					<itemName>Jaromir Nohavica – Tri Cunici</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538394354" id="2238043953">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:3T4wjAjQUu7zg7hdkxtbbP" sourceAccount="upirka" isPresetable="true">
+					<itemName>Another Brick In The Wall, Pt. 3 - 2011 Remastered Version –</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538394259" id="2238044032">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:3TXaBgAp4H6k3nX8vyYJTH" sourceAccount="upirka" isPresetable="true">
+					<itemName>Another Brick In The Wall, Pt. 1 - 2011 Remastered Version –</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1538394006" id="2238043648">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:4RxApsMOxI0WTiTTDysdg2" sourceAccount="upirka" isPresetable="true">
+					<itemName>Bitter Sweet Symphony – The Verve</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1537683051" id="2227541213">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:1Kh8YL0MsktALGpNO3oiSk" sourceAccount="upirka" isPresetable="true">
+					<itemName>Hradištan &amp; Jiří Pavlica – Hrajeme si u maminky (Play With</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1537517097" id="2186689103">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:upirka:playlist:0COchbRqzeCtGoazQ3uCCo" sourceAccount="upirka" isPresetable="true">
+					<itemName>Miroslav Zbirka – Songs for boys and girls</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1532325231" id="2232147952">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:playlist:17dagpaGYfiOcGR6hZomuW" sourceAccount="upirka" isPresetable="true">
+					<itemName>Pulp Fiction</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1532256690" id="2232072911">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:playlist:17dagpaGYfiOcGR6hZomuW" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Pulp Fiction</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1532256538" id="2200248604">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:collection" sourceAccount="jumboon" isPresetable="true">
+					<itemName>My songs</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1532253237" id="2232067959">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:playlist:7gw8H6GYPGsjGvupJ7wB6s" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Blur - The Magic Whip</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1532238581" id="2185863573">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:spotify:playlist:37i9dQZEVXcKJQMCRAjtdz" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Discover Weekly</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1531201114" id="2231054523">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:jumboon:playlist:2i3i1j3kk4WTqL1j78K0Ww" sourceAccount="upirka" isPresetable="true">
+					<itemName>Discovered</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1530512412" id="2230401556">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:station:user:upirka:playlist:4TJ10Xsvo8FmTzdvamIvKn" sourceAccount="upirka" isPresetable="true">
+					<itemName>Jaroslav Uhlir – Hlavne nesmi byti smutno</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1528956861" id="2228853071">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:station:user:jumboon:cluster:1cgirkML7pURwaIct1bLO4" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Daily Mix 1</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1527230925" id="2227102687">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:5wweeYXPgzHe8kOWMznplv" sourceAccount="jumboon" isPresetable="true">
+					<itemName>A Mouthful</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1526964707" id="2226913492">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:7v6FNgLDS8KmaWA1amUtqe" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Tranquility Base Hotel &amp; Casino</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1526134520" id="2226060965">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:user:benxander:playlist:17PeJegvQ34sejJPJ4l3bX" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Pulp Fiction soundtrack</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1525499125" id="2225364849">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:5t0lQDPLF22wmWCtSZkIVv" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Far</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1525432638" id="2225284160">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:0vi5ePiEHrGZJF7QhnDW2z" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Franz Ferdinand</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1525415391" id="2225271916">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:0Fke5eiQ6lszQHlwiFygqn" sourceAccount="jumboon" isPresetable="true">
+					<itemName>The Piper At The Gates Of Dawn [2011 - Remaster] (2011 Remaster</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1525334398" id="2225208854">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:station:album:1A1Pu2LrDLiXZcHypzshLh" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Down In Albion</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1525173000" id="2225081978">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:6uvBKDGlJAYLH5Vy6RQVsc" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Wish You Were Here [Remastered] (Remastered Version)</itemName>
+				</contentItem>
+			</recent>
+			<recent deviceID="A81B6A550F06" utcTime="1524630923" id="2224485426">
+				<contentItem source="SPOTIFY" type="uri" location="spotify:album:5rRAIWLlkwQZMJ5tvCAeoy" sourceAccount="jumboon" isPresetable="true">
+					<itemName>Arrow</itemName>
+				</contentItem>
+			</recent>
+		</recents>
+	</recentsUpdated>
+</updates>
