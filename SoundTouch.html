@@ -21,30 +21,31 @@
 
 <div class="container">
 
-  <h2>Bose group play</h2>
 
   <form>
-    <div class="row">
+    <div class="row mt-5 pt-5">
 
       <div class="col">
         <div class="form-group row">
-          <button id="connect1Btn" type="button" class="btn btn-default col-sm-3" onclick='javascript:onConnectClick("1")'>
+          <button id="connect1Btn" type="button" class="btn btn-default col-sm-4" onclick='javascript:onConnectClick("1")'>
             <i class="fas fa-plug"></i>
             <span id="connectText1">Subscribe</span>
           </button>
-          <div class="col-sm-9">
-            <input type="text" readonly class="form-control-plaintext" id="name1" value="Kitchen  Bose">
+          <div class="col-sm-8" align="center">
+            <!-- <input type="text" readonly class="form-control-plaintext" id="name1" value="Kitchen  Bose"> -->
+            <h3 id="name1"></h3>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="form-group row">
-          <button id="connect2Btn" type="button" class="btn btn-default col-sm-3" onclick='javascript:onConnectClick("2")'>
+          <button id="connect2Btn" type="button" class="btn btn-default col-sm-4" onclick='javascript:onConnectClick("2")'>
             <i class="fas fa-plug"></i>
             <span id="connectText2">Subscribe</span>
           </button>
-          <div class="col-sm-9">
-            <input type="text" readonly class="form-control-plaintext" id="name2" value="PlayroomBBose">
+          <div class="col-sm-8" align="center">
+            <!-- <input type="text" readonly class="form-control-plaintext" id="name2" value="PlayroomBBose"> -->
+            <h3 id="name2"></h3>
           </div>
         </div>
       </div>
@@ -73,65 +74,79 @@
     <div class="row">
 
       <div class="col" align="right">
-        <div class="btn-group btn-group-lg" role="group">
-          <button id="power1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("POWER", "1")'>
+        <div class="btn-group btn-group" role="group">
+          <button id="powerBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("POWER", "1")'>
             <i class="fas fa-power-off"></i>
           </button>
-          <button id="mute1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("MUTE", "1")'>
+          <button id="muteBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("MUTE", "1")'>
             <i class="fas fa-volume-mute"></i>
           </button>
-          <button id="volumeDown1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_DOWN", "1")'>
+          <button id="volumeDownBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_DOWN", "1")'>
             <i class="fas fa-volume-down"></i>
           </button>
-          <button id="volumeUp1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_UP", "1")'>
+          <button id="volumeUpBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_UP", "1")'>
             <i class="fas fa-volume-up"></i>
           </button>
         </div>
       </div>
       <div class="col" align="left">
-        <div class="btn-group btn-group-lg" role="group">
-          <button id="back1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PREV_TRACK", "1")'>
+        <div class="btn-group btn-group" role="group">
+          <button id="backBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PREV_TRACK", "1")'>
             <i class="fas fa-backward"></i>
           </button>
-          <button id="play1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PLAY_PAUSE", "1")'>
+          <button id="playBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PLAY_PAUSE", "1")'>
             <i class="fas fa-play"></i>
           </button>
-          <button id="forward1Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("NEXT_TRACK", "1")'>
+          <button id="forwardBtn1" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("NEXT_TRACK", "1")'>
             <i class="fas fa-forward"></i>
           </button>
         </div>
       </div>
       <div class="col" align="right">
-          <div class="btn-group btn-group-lg" role="group">
-            <button id="power2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("POWER", "2")'>
+          <div class="btn-group btn-group" role="group">
+            <button id="powerBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("POWER", "2")'>
               <i class="fas fa-power-off"></i>
             </button>
-            <button id="mute2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("MUTE", "2")'>
+            <button id="muteBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("MUTE", "2")'>
               <i class="fas fa-volume-mute"></i>
             </button>
-            <button id="volumeDown2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_DOWN", "2")'>
+            <button id="volumeDownBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_DOWN", "2")'>
               <i class="fas fa-volume-down"></i>
             </button>
-            <button id="volumeUp2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_UP", "2")'>
+            <button id="volumeUpBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("VOLUME_UP", "2")'>
               <i class="fas fa-volume-up"></i>
             </button>
           </div>
         </div>
         <div class="col" align="left">
-          <div class="btn-group btn-group-lg" role="group">
-            <button id="back2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PREV_TRACK", "2")'>
+          <div class="btn-group btn-group" role="group">
+            <button id="backBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PREV_TRACK", "2")'>
               <i class="fas fa-backward"></i>
             </button>
-            <button id="play2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PLAY_PAUSE", "2")'>
+            <button id="playBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("PLAY_PAUSE", "2")'>
               <i class="fas fa-play"></i>
             </button>
-            <button id="forward2Btn" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("NEXT_TRACK", "2")'>
+            <button id="forwardBtn2" type="button" class="btn btn-secondary" onclick='javascript:onKeyClick("NEXT_TRACK", "2")'>
               <i class="fas fa-forward"></i>
             </button>
           </div>
         </div>
 
+
+
     </div>
+
+    <div class="row mt-4">
+      <div class="col">
+          <label for="volume1">Current volume <span id="currentVolume1">50</span></label>
+          <input type="range" class="custom-range" min="0" max="100" step="1" id="volume1" onmouseup="javascript:onVolumeMouseUp('1')" />
+      </div>
+      <div class="col">
+          <label for="volume2">Current volume <span id="currentVolume2">50</span></label>
+          <input type="range" class="custom-range" min="0" max="100" step="1" id="volume2" onmouseup="javascript:onVolumeMouseUp('2')" />
+      </div>
+    </div>
+
     <hr />
 
 
@@ -210,7 +225,11 @@
 
       <div class="w-100"></div>
 
-      <div class="col">
+
+      <div id="currentTime1" class="col-1">
+        0:35
+      </div>
+        <div class="col-4">
         <div class="progress">
           <div id="progress1" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
             aria-valuemin="0" aria-valuemax="100">
@@ -218,8 +237,14 @@
           </div>
         </div>
       </div>
+      <div id="totalTime1" class="col-1">
+        18:15
+      </div>
 
-      <div class="col">
+      <div id="currentTime2" class="col-1">
+          0:35
+        </div>
+      <div class="col-4">
         <div class="progress">
           <div id="progress2" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
             aria-valuemin="0" aria-valuemax="100">
@@ -227,6 +252,9 @@
           </div>
         </div>
       </div>
+      <div id="totalTime2" class="col-1">
+          18:15
+        </div>
 
     </div>
 
@@ -313,26 +341,7 @@
     <hr />
 
     <div class="row mt-4"></div>
-    <br />
-    <input id="sendKeyBtn" type='button' onclick='javascript:onPresetKeyClick()' value='Send key' />
-
-
-    <input id="nowPlayingBtn" type='button' onclick='javascript:onNowPlayingClick()' value='Now playing' />
-
-
-    <input id="getZoneBtn" type='button' onclick='javascript:onGetZoneClick()' value='Get zone' />
-
-
-    <input id="setZone1Btn" type='button' onclick='javascript:onSetZone1Click()' value='setZone1Btn' />
-
-    <input id="setZone2Btn" type='button' onclick='javascript:onSetZone2Click()' value='setZone2Btn' />
-
-
-    <input id="addZoneSlaveBtn" type='button' onclick='javascript:onAddZoneSlaveClick()' value='addZoneSlave' />
-
-
-    <input id="removeZoneSlaveBtn" type='button' onclick='javascript:onRemoveZoneSlaveClick()' value='removeZoneSlave' />
-
+    
     <div class="row ">Output:</div>
     <div class="row ">
       <div id="output"></div>
