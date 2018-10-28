@@ -1,4 +1,5 @@
 /*
+TODO test on phone
 TODO timer to have nowplaying updated more frequently
 TODO make 'Remove slave from zone' work
 TODO write something useful into zoneStatus 
