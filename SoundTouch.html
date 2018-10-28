@@ -16,22 +16,22 @@
 
 
 
-  <script src="scripts/common.js"></script>
-  <script src="scripts/keys.js"></script>
-  <script src="scripts/connectionState.js"></script>
-  <script src="scripts/nowPlaying.js"></script>
-  <script src="scripts/info.js"></script>
-  <script src="scripts/volume.js"></script>
-  <script src="scripts/zones.js"></script>
-  <script src="scripts/notifications.js"></script>
-  <script src="scripts/starter.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/keys.js"></script>
+<script src="scripts/connectionState.js"></script>
+<script src="scripts/nowPlaying.js"></script>
+<script src="scripts/info.js"></script>
+<script src="scripts/volume.js"></script>
+<script src="scripts/zones.js"></script>
+<script src="scripts/notifications.js"></script>
+<script src="scripts/starter.js"></script>
 
-  <script >
-    soundTouchStarter.init();
+<script>
+  soundTouchStarter.init();
   </script>
 
 
-<div class="container">
+<div class="container mb-5 pb-5">
 
 
   <form>
@@ -39,23 +39,29 @@
 
       <div class="col">
         <div class="form-group row">
-          <button id="connect1Btn" type="button" class="btn btn-default col-sm-4" onclick='javascript:soundTouchStarter.onConnectClick("1")'>
-            <i class="fas fa-plug"></i>
-            <span id="connectText1">Subscribe</span>
-          </button>
-          <div class="col-sm-8" align="center">
-            <!-- <input type="text" readonly class="form-control-plaintext" id="name1" value="Kitchen  Bose"> -->
+
+          <div class="col-2 ">
+            <button id="connectBtn1" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("1")'>
+              <i class="fas fa-plug"></i>
+            </button>
+          </div>
+
+          <div class="col-sm-10" align="center">
             <h3 id="name1"></h3>
           </div>
+
         </div>
       </div>
-      <div class="col">
+      <div class="col border-left">
         <div class="form-group row">
-          <button id="connect2Btn" type="button" class="btn btn-default col-sm-4" onclick='javascript:soundTouchStarter.onConnectClick("2")'>
-            <i class="fas fa-plug"></i>
-            <span id="connectText2">Subscribe</span>
-          </button>
-          <div class="col-sm-8" align="center">
+
+          <div class="col-2 ">
+            <button id="connectBtn2" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("2")'>
+              <i class="fas fa-plug"></i>
+            </button>
+          </div>
+
+          <div class="col-sm-10" align="center">
             <!-- <input type="text" readonly class="form-control-plaintext" id="name2" value="PlayroomBBose"> -->
             <h3 id="name2"></h3>
           </div>
@@ -72,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col border-left">
         <div class="form-group row">
           <label for="ipAddr2" class="col-sm-2 col-form-label">IP</label>
           <div class="col-sm-10">
@@ -114,48 +120,48 @@
           </button>
         </div>
       </div>
-      <div class="col" align="right">
-          <div class="btn-group btn-group" role="group">
-            <button id="powerBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("POWER", "2")'>
-              <i class="fas fa-power-off"></i>
-            </button>
-            <button id="muteBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("MUTE", "2")'>
-              <i class="fas fa-volume-mute"></i>
-            </button>
-            <button id="volumeDownBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("VOLUME_DOWN", "2")'>
-              <i class="fas fa-volume-down"></i>
-            </button>
-            <button id="volumeUpBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("VOLUME_UP", "2")'>
-              <i class="fas fa-volume-up"></i>
-            </button>
-          </div>
+      <div class="col border-left" align="right">
+        <div class="btn-group btn-group" role="group">
+          <button id="powerBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("POWER", "2")'>
+            <i class="fas fa-power-off"></i>
+          </button>
+          <button id="muteBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("MUTE", "2")'>
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <button id="volumeDownBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("VOLUME_DOWN", "2")'>
+            <i class="fas fa-volume-down"></i>
+          </button>
+          <button id="volumeUpBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("VOLUME_UP", "2")'>
+            <i class="fas fa-volume-up"></i>
+          </button>
         </div>
-        <div class="col" align="left">
-          <div class="btn-group btn-group" role="group">
-            <button id="backBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PREV_TRACK", "2")'>
-              <i class="fas fa-backward"></i>
-            </button>
-            <button id="playBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PLAY_PAUSE", "2")'>
-              <i class="fas fa-play"></i>
-            </button>
-            <button id="forwardBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("NEXT_TRACK", "2")'>
-              <i class="fas fa-forward"></i>
-            </button>
-          </div>
+      </div>
+      <div class="col " align="left">
+        <div class="btn-group btn-group" role="group">
+          <button id="backBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PREV_TRACK", "2")'>
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="playBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PLAY_PAUSE", "2")'>
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="forwardBtn2" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("NEXT_TRACK", "2")'>
+            <i class="fas fa-forward"></i>
+          </button>
         </div>
+      </div>
 
 
 
     </div>
 
-    <div class="row mt-4">
+    <div class="row pt-4">
       <div class="col">
-          <label for="volume1">Current volume <span id="currentVolume1">50</span></label>
-          <input type="range" class="custom-range" min="0" max="100" step="1" id="volume1" onmouseup="javascript:soundTouchVolume.onVolumeMouseUp('1')" />
+        <label for="volume1">Current volume <span id="currentVolume1">50</span></label>
+        <input type="range" class="custom-range" min="0" max="100" step="1" id="volume1" onmouseup="javascript:soundTouchVolume.onVolumeMouseUp('1')" />
       </div>
-      <div class="col">
-          <label for="volume2">Current volume <span id="currentVolume2">50</span></label>
-          <input type="range" class="custom-range" min="0" max="100" step="1" id="volume2" onmouseup="javascript:soundTouchVolume.onVolumeMouseUp('2')" />
+      <div class="col border-left">
+        <label for="volume2">Current volume <span id="currentVolume2">50</span></label>
+        <input type="range" class="custom-range" min="0" max="100" step="1" id="volume2" onmouseup="javascript:soundTouchVolume.onVolumeMouseUp('2')" />
       </div>
     </div>
 
@@ -164,17 +170,18 @@
 
     <div class="row">
       <div class="col" align="center">
-        <h3>Now playing</h3>
+        <h3><a data-toggle="collapse" href="#nowPlayingRow" aria-expanded="true" aria-controls="nowPlayingRow">Now
+            playing</a></h3>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row collapse show" id="nowPlayingRow">
       <div class="col" align="center">
         <button id="nowPlaying1Btn" type="button" class="btn btn-default" onclick='javascript:soundTouchNowPlaying.onNowPlayingClick("1")'>
           <i class="fas fa-sync-alt"></i>
         </button>
       </div>
-      <div class="col" align="center">
+      <div class="col " align="center">
         <button id="nowPlaying2Btn" type="button" class="btn btn-default" onclick='javascript:soundTouchNowPlaying.onNowPlayingClick("2")'>
           <i class="fas fa-sync-alt"></i>
         </button>
@@ -189,7 +196,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col border-left">
         <div class="form-group row">
           <label for="song2" class="col-sm-2 col-form-label">Song</label>
           <div class="col-sm-10">
@@ -207,7 +214,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col border-left">
         <div class="form-group row">
           <label for="album2" class="col-sm-2 col-form-label">Album</label>
           <div class="col-sm-10">
@@ -226,7 +233,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col border-left">
         <div class="form-group row">
           <label for="artist2" class="col-sm-2 col-form-label">Artist</label>
           <div class="col-sm-10">
@@ -241,10 +248,9 @@
       <div id="currentTime1" class="col-1">
         0:35
       </div>
-        <div class="col-4">
+      <div class="col-4">
         <div class="progress">
-          <div id="progress1" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100">
+          <div id="progress1" class="progress-bar" role="progressbar" style="width: 25%;">
             25%
           </div>
         </div>
@@ -253,20 +259,19 @@
         18:15
       </div>
 
-      <div id="currentTime2" class="col-1">
-          0:35
-        </div>
+      <div id="currentTime2" class="col-1 border-left">
+        0:35
+      </div>
       <div class="col-4">
         <div class="progress">
-          <div id="progress2" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100">
+          <div id="progress2" class="progress-bar" role="progressbar" style="width: 25%;">
             25%
           </div>
         </div>
       </div>
       <div id="totalTime2" class="col-1">
-          18:15
-        </div>
+        18:15
+      </div>
 
     </div>
 
@@ -274,7 +279,7 @@
 
     <div class="row">
       <div class="col" align="center">
-        <h3>Zones</h3>
+        <h3><a data-toggle="collapse" href="#zonesRow" aria-expanded="true" aria-controls="zonesRow">Zones</a></h3>
       </div>
       <div class="w-100"></div>
       <div class="col">
@@ -291,11 +296,11 @@
       </div>
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-4 collapse show" id="zonesRow">
       <div class="col" align="center">
         <input id="setZone1Btn" class="btn btn-default" type="button" value="Make zone with me as master" onclick='javascript:soundTouchZones.onSetZoneClick("1")' />
       </div>
-      <div class="col" align="center">
+      <div class="col border-left" align="center">
         <input id="setZone2Btn" class="btn btn-default" type="button" value="Make zone with me as master" onclick='javascript:soundTouchZones.onSetZoneClick("2")' />
       </div>
 
@@ -304,7 +309,7 @@
       <div class="col" align="center">
         Is master:
       </div>
-      <div class="col" align="center">
+      <div class="col border-left" align="center">
         Is master:
       </div>
 
@@ -313,7 +318,7 @@
       <div class="col" align="center">
         <input id="removeSlave1Btn" class="btn btn-default" type="button" value="Remove me from zone" onclick='javascript:soundTouchZones.onRemoveSlaveClick("1")' />
       </div>
-      <div class="col" align="center">
+      <div class="col border-left" align="center">
         <input id="removeSlave2Btn" class="btn btn-default" type="button" value="Remove me from zone" onclick='javascript:soundTouchZones.onRemoveSlaveClick("2")' />
       </div>
 
@@ -323,10 +328,10 @@
 
     <div class="row">
       <div class="col" align="center">
-        <h3>Presets</h3>
+        <h3><a data-toggle="collapse" href="#presetsRow" aria-expanded="true" aria-controls="presetsRow">Presets</a></h3>
       </div>
     </div>
-    <div class="row">
+    <div class="row collapse show" id="presetsRow">
       <div class="col" align="center">
         <div class="btn-group btn-group-lg" role="group">
           <button id="preset1-1Btn" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PRESET_1", "1")'>1</button>
@@ -337,7 +342,7 @@
           <button id="preset6-1Btn" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PRESET_6", "1")'>6</button>
         </div>
       </div>
-      <div class="col" align="center">
+      <div class="col border-left" align="center">
         <div class="btn-group btn-group-lg" role="group">
           <button id="preset1-2Btn" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PRESET_1", "2")'>1</button>
           <button id="preset2-2Btn" type="button" class="btn btn-secondary" onclick='javascript:soundTouchKeys.onKeyClick("PRESET_2", "2")'>2</button>
@@ -352,11 +357,20 @@
 
     <hr />
 
-    <div class="row mt-4"></div>
-    
-    <div class="row ">Raw messages:</div>
-    <div class="row mb-5 pb-5">
-      <textarea id="rawArea" class="form-control-sm" style="min-width: 100%; height:500px"> </textarea>
+
+
+
+
+    <div class="row mt-4"><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseLog"
+        aria-expanded="false" aria-controls="collapseLog">Show log</button></div>
+
+    <div id="collapseLog" class="collapse">
+      <div class="row ">Raw messages:</div>
+      <div class="row">
+        <textarea id="rawArea" class="form-control-sm" style="min-width: 100%; height:500px"> </textarea>
+      </div>
     </div>
+
+
 
 </div>

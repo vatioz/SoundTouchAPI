@@ -32,8 +32,15 @@ var soundTouchStarter = (function () {
 
     function onOpen(evt, sequence) {
         soundTouchCommon.writeLog("CONNECTED (" + sequence + ")");
-        var connectBtn = soundTouchCommon.getElement("connectText", sequence);
-        $(connectBtn).text("Unsubscribe");
+        //var connectBtn = soundTouchCommon.getElement("connectText", sequence);
+        //$(connectBtn).text("Unsubscribe");
+
+
+        var connectBtn = soundTouchCommon.getElement("connectBtn", sequence);
+        $(connectBtn).removeClass("btn-dark");
+        $(connectBtn).addClass("btn-success");
+        var nowPlayingRow = document.getElementById('nowPlayingRow');
+        $(nowPlayingRow).collapse('show');
 
         var ipAddrField = soundTouchCommon.getElement("ipAddr", sequence);
         $(ipAddrField).prop("disabled", "disabled");
@@ -56,9 +63,13 @@ var soundTouchStarter = (function () {
     function onClose(evt, sequence) {
         soundTouchCommon.writeLog("DISCONNECTED (" + sequence + ")");
 
-        var connectBtn = soundTouchCommon.getElement("connectText", sequence);
-        $(connectBtn).text("Subscribe");
-
+        var connectBtn = soundTouchCommon.getElement("connectBtn", sequence);
+        $(connectBtn).removeClass("btn-success");
+        $(connectBtn).addClass("btn-dark");
+        
+        var nowPlayingRow = document.getElementById('nowPlayingRow');
+        $(nowPlayingRow).collapse('hide');
+        
         var ipAddrField = soundTouchCommon.getElement("ipAddr", sequence);
         $(ipAddrField).removeAttr("disabled");
 

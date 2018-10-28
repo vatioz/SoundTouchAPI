@@ -25,7 +25,8 @@ var soundTouchCommon = (function () {
         },
 
         writeLog: function (data) {
-            logArea.value += data + "\n\n";
+            currentContent = logArea.value;
+            logArea.value = new Date().toLocaleString() +": " + data + "\n\n" + currentContent;
         },
 
         getElement: function (id, sequence) {
