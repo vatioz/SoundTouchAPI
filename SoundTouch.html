@@ -37,36 +37,36 @@
   <form>
     <div class="row mt-5 pt-5">
 
-      <div class="col">
-        <div class="form-group row">
-
-          <div class="col-2 ">
-            <button id="connectBtn1" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("1")'>
-              <i class="fas fa-plug"></i>
-            </button>
-          </div>
-
-          <div class="col-sm-10" align="center">
-            <h3 id="name1"></h3>
-          </div>
-
-        </div>
+      <div class="col-1">
+        <button id="connectBtn1" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("1")'>
+          <i class="fas fa-plug"></i>
+        </button>
       </div>
-      <div class="col border-left">
-        <div class="form-group row">
 
-          <div class="col-2 ">
-            <button id="connectBtn2" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("2")'>
-              <i class="fas fa-plug"></i>
-            </button>
-          </div>
-
-          <div class="col-sm-10" align="center">
-            <!-- <input type="text" readonly class="form-control-plaintext" id="name2" value="PlayroomBBose"> -->
-            <h3 id="name2"></h3>
-          </div>
-        </div>
+      <div class="col-4 " align="center">
+        <h3 id="name1"></h3>
       </div>
+
+      <div class="col-1  align-bottom">
+        <i id="signal1" class="fas fa-signal align-top text-success" style="font-size: 2em;"></i>
+      </div>
+
+
+
+      <div class="col-1 border-left">
+        <button id="connectBtn2" type="button" class="btn btn-dark" onclick='javascript:soundTouchStarter.onConnectClick("2")'>
+          <i class="fas fa-plug"></i>
+        </button>
+      </div>
+
+      <div class="col-4" align="center">
+        <h3 id="name2"></h3>
+      </div>
+
+      <div class="col-1 align-bottom">
+        <i id="signal2" class="fas fa-signal align-top text-success" style="font-size: 2.0em;"></i>
+      </div>
+
 
       <div class="w-100"></div>
 

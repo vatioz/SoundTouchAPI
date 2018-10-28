@@ -1,5 +1,4 @@
 /*
-TODO process other update messages NETWORK SIGNAL (show some icon of signal strength)
 TODO timer to have nowplaying updated more frequently
 TODO write something useful into zoneStatus 
 */

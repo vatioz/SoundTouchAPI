@@ -1,5 +1,29 @@
 var soundTouchConnectionState = (function () {
 
+    function setSignal(signal, sequence) {
+        var signalEl = soundTouchCommon.getElement("signal", sequence);
+        signalEl = $(signalEl);
+        clearColors(signalEl);
+
+        if(signal === "EXCELLENT_SIGNAL") {
+            signalEl.addClass('text-success');
+        } else if(signal === "GOOD_SIGNAL") {
+            signalEl.addClass('text-info');
+        } else if(signal === "MARGINAL_SIGNAL") {
+            signalEl.addClass('text-warning');
+        } else if(signal === "POOR_SIGNAL") {
+            signalEl.addClass('text-danger');
+        }
+    }
+
+    function clearColors(signalEl) {
+        signalEl.removeClass('text-success');
+        signalEl.removeClass('text-info');
+        signalEl.removeClass('text-warning');
+        signalEl.removeClass('text-danger');
+    }
+
+
     return {
 
         connectionStateReceived: function (xmlMessage, sequence) {
@@ -19,7 +43,7 @@ var soundTouchConnectionState = (function () {
                 soundTouchCommon.writeLog("UNEXPECTED connection signal: " + signal);
             }
 
-            //setSignal(signal, sequence);
+            setSignal(signal, sequence);
         },
     }
 })();
