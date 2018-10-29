@@ -16,6 +16,7 @@ The only place it is not universal is Zones. This is on my list of TODOs.
 ## Advantages over official app
 As simple as this page is, there are few things that this page gives you, that official BOSE SoundTouch app doesn't:
 
+ * Instant load, as opposed to "Searching for speakers..."
  * Side-by-side view of both speakers
  * Indicator of WIFI signal strength
  * Auto-zoning - one button will create zone without asking who is master and who slave - simply the one playing is a master
